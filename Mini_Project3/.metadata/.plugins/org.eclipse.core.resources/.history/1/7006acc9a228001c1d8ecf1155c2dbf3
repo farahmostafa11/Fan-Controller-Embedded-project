@@ -1,0 +1,35 @@
+/*
+ * ADC.c
+ *
+ *  Created on: Oct 4, 2021
+ *      Author: farah
+ */
+#include"ADC.h"
+#include "avr/io.h" /* To use the ADC Registers */
+#include <avr/interrupt.h> /* For ADC ISR */
+#include "common_macros.h" /* To use the macros like SET_BIT */
+/*******************************************************************************
+ *                          Global Variables                                   *
+ *******************************************************************************/
+
+volatile uint16 g_adcResult = 0;	//to save the result after conversion
+
+/*******************************************************************************
+ *                          ISR's Definitions                                  *
+ *******************************************************************************/
+ISR(ADC_vect){
+	g_adcResult=ADC;
+}
+
+void ADC_init(const ADC_ConfigType * Config_Ptr){
+	//ADMUX=0;
+	Config_Ptr->ref_volt=Config_Ptr->ref_volt&0X03;
+	ADMUX=(Config_Ptr->ref_volt<<6);
+	ADCSRA=(1<<ADEN)|(1<<ADIE)|(1<<ADPS0)|(1<<ADPS1);
+	//PRESCALER 8 interrupt enable & ADC enable
+}
+void ADC_readChannel(uint8 ch_num){
+	ADMUX=(ADMUX & 0XE0)|(ch_num & 0x1F);
+	//setting the ADC CHANNEL number
+	SET_BIT(ADCSRA,ADSC);	//Start conversion
+}

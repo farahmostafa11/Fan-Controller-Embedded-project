@@ -1,0 +1,14 @@
+/*
+ * LM35_sensor.c
+ *
+ *  Created on: Oct 4, 2021
+ *      Author: farah
+ */
+
+#include <util/delay.h> /* For the delay functions */
+#include"LM35_sensor.h"
+#include"ADC.h"
+
+uint8 LM35_getTemperature(void){
+
+}

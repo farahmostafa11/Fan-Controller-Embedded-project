@@ -1,0 +1,155 @@
+23:09:04 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../ADC.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"ADC.d" -MT"ADC.o" -c -o "ADC.o" "../ADC.c"
+AllocationBase 0x0, BaseAddress 0x71540000, RegionSize 0xC0000, State 0x10000
+C:\WinAVR-20100110\utils\bin\sh.exe: *** Couldn't reserve space for cygwin's heap, Win32 error 0
+make: *** [ADC.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+23:13:22 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../ADC.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"ADC.d" -MT"ADC.o" -c -o "ADC.o" "../ADC.c"
+Finished building: ../ADC.c
+ 
+Building file: ../DC_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"DC_motor.d" -MT"DC_motor.o" -c -o "DC_motor.o" "../DC_motor.c"
+Finished building: ../DC_motor.c
+ 
+Building file: ../PWM_TIMER0.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"PWM_TIMER0.d" -MT"PWM_TIMER0.o" -c -o "PWM_TIMER0.o" "../PWM_TIMER0.c"
+In file included from ../PWM_TIMER0.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../PWM_TIMER0.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:145: warning: implicit declaration of function 'itoa'
+Finished building: ../lcd.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+In file included from ../lm35_sensor.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../miniproject.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"miniproject.d" -MT"miniproject.o" -c -o "miniproject.o" "../miniproject.c"
+Finished building: ../miniproject.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega16 -o "mini_project3.elf"  ./ADC.o ./DC_motor.o ./PWM_TIMER0.o ./gpio.o ./lcd.o ./lm35_sensor.o ./miniproject.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9336 bytes (57.0% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (28.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:14:03 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9336 bytes (57.0% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (28.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+00:03:18 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Building file: ../DC_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"DC_motor.d" -MT"DC_motor.o" -c -o "DC_motor.o" "../DC_motor.c"
+Finished building: ../DC_motor.c
+ 
+Building file: ../PWM_TIMER0.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"PWM_TIMER0.d" -MT"PWM_TIMER0.o" -c -o "PWM_TIMER0.o" "../PWM_TIMER0.c"
+In file included from ../PWM_TIMER0.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../PWM_TIMER0.c
+ 
+Building file: ../miniproject.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"miniproject.d" -MT"miniproject.o" -c -o "miniproject.o" "../miniproject.c"
+Finished building: ../miniproject.c
+ 
+Building target: mini_project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_project3.map -mmcu=atmega16 -o "mini_project3.elf"  ./ADC.o ./DC_motor.o ./PWM_TIMER0.o ./gpio.o ./lcd.o ./lm35_sensor.o ./miniproject.o   
+Finished building target: mini_project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_project3.elf  >"mini_project3.lss"
+Finished building: mini_project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9336 bytes (57.0% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (28.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+00:03:28 **** Incremental Build of configuration Debug for project mini_project3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 mini_project3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9336 bytes (57.0% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (28.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
